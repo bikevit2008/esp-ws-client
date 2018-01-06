@@ -1,10 +1,10 @@
 import { WEBSOCKET_CONNECT, WEBSOCKET_DISCONNECT, WEBSOCKET_SEND } from '../middleware/websocket'
 
-export function wsConnect(url) {
+export function wsConnect(args) {
   return {
     type: WEBSOCKET_CONNECT,
     payload: {
-        url: url
+        args: args
     }
   }
 }

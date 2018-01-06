@@ -18,7 +18,7 @@ export default function configureStore(initialState) {
 
     const ip = '10.0.1.10'
     const wsUrl = 'ws://' + ip
-    store.dispatch(wsConnect(wsUrl))
+    store.dispatch(wsConnect([wsUrl, 'protocolOne']))
 
     if (module.hot) {
     module.hot.accept('../reducers', () => {
